@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Application component for registering with the Grunt's live reload plugin.
+ * Application component for registering with the Grunt's live reload server.
  */
 class LiveReload extends CApplicationComponent
 {

@@ -25,7 +25,7 @@ class LiveReload extends CApplicationComponent
     {
         if (($cs = Yii::app()->getComponent($this->clientScriptID)) !== null) {
             $cs->registerScriptFile(
-                $this->host . ':' . (string)$this->port . '/livereload.js',
+                "{$this->host}:{$this->port}/livereload.js",
                 CClientScript::POS_END
             );
         }

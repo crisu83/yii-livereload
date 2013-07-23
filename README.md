@@ -1,4 +1,4 @@
 yii-livereload
 ==============
 
-Extension for Yii that registers the Grunt livereload plugin.
+Extension for the Yii PHP framework that registers with the Grunt livereload server.

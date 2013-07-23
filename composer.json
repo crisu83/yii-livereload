@@ -1,6 +1,6 @@
 {
     "name": "crisu83/yii-livereload",
-    "description": "Extension for Yii that registers the Grunt livereload plugin.",
+    "description": "Extension for the Yii PHP framework that registers with the Grunt livereload server.",
     "keywords": ["grunt", "livereload"],
     "type": "yii-extension",
     "license": "BSD-3-Clause",

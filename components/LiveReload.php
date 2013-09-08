@@ -8,11 +8,11 @@ class LiveReload extends CApplicationComponent
     /**
      * @var string the host name of the server running the live reload server.
      */
-    public $host = 'localhost';
+    public $host;
     /**
      * @var array live reload ports.
      */
-    public $port = 35729;
+    public $port;
     /**
      * @var string the component ID for the client script component.
      */
@@ -23,9 +23,10 @@ class LiveReload extends CApplicationComponent
      */
     public function register()
     {
-        if (($cs = Yii::app()->getComponent($this->clientScriptID)) !== null) {
+        /* @var CClientScript $cs */
+        if (isset($this->host, $this->port) && ($cs = Yii::app()->getComponent($this->clientScriptID)) !== null) {
             $cs->registerScriptFile(
-                "{$this->host}:{$this->port}/livereload.js",
+                "//{$this->host}:{$this->port}/livereload.js",
                 CClientScript::POS_END
             );
         }
